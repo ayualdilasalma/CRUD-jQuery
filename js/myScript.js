@@ -79,7 +79,7 @@ function UpdateRecordDetails() {
 		emp_gender: gender
 	}, function(data, status) {
 
-		confirm(name);
+		// confirm(name);
 		$("#update_emp_modal").modal("hide");
 
 		readRecords();
