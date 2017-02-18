@@ -54,7 +54,8 @@ function GetEmpDetails(emp_id) {
 		// Assing existing values to the modal popup fields
 		$('#update_name').val(user.emp_name);
 		$('#update_email').val(user.emp_email);
-		$('#update_gender').val(user.emp_gender);
+		var jenis_kelamin = user.emp_gender;
+		$('input[name=jenis_kelamin][value='+ jenis_kelamin +']').attr('checked', true);
 		$('#update_address').val(user.emp_address);
 
 	});
@@ -77,6 +78,8 @@ function UpdateRecordDetails() {
 		emp_address: address,
 		emp_gender: gender
 	}, function(data, status) {
+
+		confirm(name);
 		$("#update_emp_modal").modal("hide");
 
 		readRecords();

@@ -13,10 +13,10 @@ if( isset($_POST['emp_name']) && isset($_POST['emp_gender']) && isset($_POST['em
 		$address = $_POST['emp_address'];
 
 		$query = "UPDATE emp_details SET emp_name = '$name',
-			 emp_email = '$email',
-			 emp_gender = '$gender',
-			 emp_address = '$address'
-			WHERE emp_id = '$id' ";
+					 emp_email = '$email',
+					 emp_gender = '$gender',
+					 emp_address = '$address'
+					WHERE emp_id = '$id' ";
 
 		if ( !$result = mysqli_query($con, $query) ) {
 			exit(mysqli_error($con));
